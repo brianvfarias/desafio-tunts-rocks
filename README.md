@@ -22,7 +22,7 @@ O desafio consiste em criar uma aplicação capaz de ler informações de uma AP
   yarn
 ```
 
-**NOTA:** É preciso ter é preciso ter o [NodeJS](https://nodejs.org/en/download/) e o [YARN](https://classic.yarnpkg.com/lang/en/docs/install/) instalados
+**NOTA:** É preciso ter o [NodeJS](https://nodejs.org/en/download/) e o [YARN](https://classic.yarnpkg.com/lang/en/docs/install/) instalados
 
 #
 
