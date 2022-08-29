@@ -6,19 +6,27 @@ O desafio consiste em criar uma aplicação capaz de ler informações de uma AP
 
 # Como rodar a aplicação
 
-Passo 1: Clonar o repositório com o comando:
+## Passo 1: Clonar o repositório com o comando:
 
 ```shell
   git clone https://github.com/brianvfarias/desafio-tunts-rocks.git
 ```
 
-Passo 2: Baixar as dependências (é preciso ter o [NodeJS](https://nodejs.org/en/download/) e o [YARN](https://classic.yarnpkg.com/lang/en/docs/install/) instalados) com o comando:
+**NOTA:** É preciso ter o [git](https://git-scm.com/downloads) instalado
+
+#
+
+## Passo 2: Baixar as dependências com o comando:
 
 ```shell
   yarn
 ```
 
-Passo 3: Finalmente, para gerar a planilha com o comando:
+**NOTA:** É preciso ter é preciso ter o [NodeJS](https://nodejs.org/en/download/) e o [YARN](https://classic.yarnpkg.com/lang/en/docs/install/) instalados
+
+#
+
+## Passo 3: Finalmente, gerar a planilha com o comando:
 
 ```shell
   yarn dev
