@@ -6,6 +6,7 @@ async function getCountries() {
   const countries = await axios
     .get('https://restcountries.com/v3.1/all')
     .then(res => res.data);
+  console.log(`Data fetched ${JSON.stringify(countries)}`);
   return countries;
 }
 
@@ -14,7 +15,7 @@ const countries = await getCountries();
 // Filling worksheet with the data collected
 const workbook = new ExcelJS.Workbook();
 
-const countriesSheet = workbook.addWorksheet('Countries');
+const countriesSheet = workbook.addWorksheet('Countries List');
 
 countriesSheet.columns = [
   {
@@ -39,13 +40,18 @@ countriesSheet.columns = [
   }
 ];
 
-countries.forEach(({ name, capital, currencies, area }) => {
+countries.forEach(({ name, capital, currencies, area }, index) => {
   countriesSheet.addRow({
     name: name.common,
     capital: capital ? JSON.stringify(capital[0]).replaceAll('"', '') : '-',
     area: area ? area : '-',
     currencies: currencies ? Object.keys(currencies).join(', ') : '-'
   });
+  // Values attributed to each row
+  console.log(`Country  ${index + 1}: name: ${name.common}, capital: ${
+    capital ? JSON.stringify(capital[0]).replaceAll('"', '') : '-'
+  }, ${area ? area : '-'},
+  ${currencies ? Object.keys(currencies).join(', ') : '-'}`);
 });
 
 // Editing and formatting the worksheet
